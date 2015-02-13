@@ -1,0 +1,18 @@
+---
+languages:
+  - learned
+  - not yet
+
+learned:
+  - ruby
+  - coffeescript
+
+not yet:
+  - elixir
+  - rust
+
+ruby:
+  - <3
+
+coffeescript:
+  - emberscript
