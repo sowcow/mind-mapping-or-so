@@ -18,6 +18,7 @@ rake
 
 - graphviz
 - tmux
+- vim
 - eog :honeybee:
 
 ## todo
