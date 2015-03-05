@@ -21,6 +21,7 @@ rake
 - vim
 - eog :honeybee:
 
-## todo
+## todo?
 
-- some of them needs to be highlighted
+- to find a way to use tags...
+- yaml vs own syntax?

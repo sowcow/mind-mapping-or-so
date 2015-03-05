@@ -3,8 +3,8 @@ languages:
   - learned
   - not yet
 
-learned:
-  - ruby
+learned { color - blue, node attrs this way }:
+  - ruby { color - red, edge attrs actually }
   - coffeescript
 
 not yet:
