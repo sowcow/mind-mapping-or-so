@@ -2,7 +2,10 @@ require_relative './lib/yaml_to_dot'
 require_relative './lib/files'
 
 
-task :default => :edit
+desc 'build and run editing process'
+task :default => [:build, :edit]
+
+desc 'build graph image'
 task :build => :graph
 
 
