@@ -33,7 +33,7 @@ class Attrs
     @attrs = preprocess_attrs attrs
   end
 
-  ATTR_SPLITTER = ?:
+  ATTR_SPLITTER = ' - '
 
   ATTRS = -> string {
     string =~ /#{ATTR_SPLITTER}/
