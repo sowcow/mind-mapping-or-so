@@ -6,9 +6,11 @@ There is also some automation for better living.
 ## usage
 
 ```
+bundle
 mv example_source.yml source.yml
-# not sure about chmod +x run.sh
 rake
+# edit opened file and preview changes
+# optionally remove source.yml from .gitignore
 
 ```
 
