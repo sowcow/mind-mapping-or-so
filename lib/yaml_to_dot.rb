@@ -1,4 +1,15 @@
 require 'yaml'
+require_relative 'attrs'
+
+
+module PlusAsInspect
+  refine String do
+    def +@
+      inspect
+    end
+  end
+end
+using PlusAsInspect
 
 
 def yaml_to_dot yaml
@@ -8,9 +19,22 @@ def yaml_to_dot yaml
   data = join_hashes pieces
   
   dot_contents = data.map { |key, values|
+    node_attrs, key = Attrs.split key
+
+    node = "  #{+key} [%s]\n" % \
+      node_attrs.attrs.map { |k,v|
+        "#{+k}=#{+v}"
+      }.join(' ')
+
+    node +
     values.map { |value|
-      "  #{key.inspect} -> #{value.inspect}"
-    }.join "\n"
+      edge_attrs, value = Attrs.split value
+
+      "  #{+key} -> #{+value} [%s]" % \
+        edge_attrs.attrs.map { |k,v|
+          "#{+k}=#{+v}"
+        }.join(' ')
+    }.join("\n")
   
   }.join "\n\n"
   
