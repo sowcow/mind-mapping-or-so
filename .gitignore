@@ -1,3 +1,8 @@
 generated.dot
 graph.png
+
 source.yml
+# this one can be removed if you want to track graph changes
+
+Gemfile.lock
+# I don't expect problems with it
